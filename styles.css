@@ -14,13 +14,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    background: linear-gradient(135deg, #002244, #FB4F14);
     border-radius: 5px;
-    border: 2px solid rgba(15, 23, 42, 0.8);
+    border: 2px solid rgba(0, 34, 68, 0.8);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #7c3aed, #db2777);
+    background: linear-gradient(135deg, #005A8B, #FF8200);
 }
 
 /* Glass morphism effects */
@@ -58,7 +58,7 @@ body {
 
 /* Gradient text animations */
 .gradient-text {
-    background: linear-gradient(135deg, #8b5cf6, #ec4899, #3b82f6);
+    background: linear-gradient(135deg, #002244, #FB4F14, #005A8B);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -89,10 +89,10 @@ body {
 /* Pulse animation for CTA buttons */
 @keyframes pulse-glow {
     0%, 100% {
-        box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        box-shadow: 0 0 20px rgba(0, 34, 68, 0.5);
     }
     50% {
-        box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+        box-shadow: 0 0 30px rgba(251, 79, 20, 0.8);
     }
 }
 
@@ -103,7 +103,7 @@ body {
 /* Loading spinner */
 .spinner {
     border: 2px solid rgba(255, 255, 255, 0.3);
-    border-top: 2px solid #8b5cf6;
+    border-top: 2px solid #FB4F14;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -151,7 +151,7 @@ body {
 /* Enhanced focus states */
 input:focus, button:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 0 3px rgba(251, 79, 20, 0.3);
 }
 
 /* Mobile responsiveness improvements */
@@ -168,7 +168,7 @@ input:focus, button:focus {
 /* Dark mode enhancements */
 @media (prefers-color-scheme: dark) {
     body {
-        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+        background: linear-gradient(135deg, #002244 0%, #005A8B 50%, #FB4F14 100%);
     }
 }
 
