@@ -239,6 +239,75 @@
             </div>
         </div>
 
+        <!-- API Testing Interface -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 mb-8">
+            <h3 class="text-xl font-semibold text-white mb-4">API Testing Interface</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="text-lg font-medium text-white mb-3">Test Endpoints</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3 p-3 bg-white/5 rounded-lg">
+                            <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                            <span class="text-gray-300 text-sm">GET /api/sandboxes</span>
+                            <button class="ml-auto bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs transition duration-300" onclick="testEndpoint('GET', '/api/sandboxes')">
+                                Test
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-white/5 rounded-lg">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                            <span class="text-gray-300 text-sm">POST /api/sandboxes</span>
+                            <button class="ml-auto bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs transition duration-300" onclick="testEndpoint('POST', '/api/sandboxes')">
+                                Test
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-white/5 rounded-lg">
+                            <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                            <span class="text-gray-300 text-sm">PUT /api/sandboxes/{id}</span>
+                            <button class="ml-auto bg-purple-500 hover:bg-purple-600 text-white px-3 py-1 rounded text-xs transition duration-300" onclick="testEndpoint('PUT', '/api/sandboxes/1')">
+                                Test
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-white/5 rounded-lg">
+                            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+                            <span class="text-gray-300 text-sm">DELETE /api/sandboxes/{id}</span>
+                            <button class="ml-auto bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-xs transition duration-300" onclick="testEndpoint('DELETE', '/api/sandboxes/1')">
+                                Test
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium text-white mb-3">Response Log</h4>
+                    <div id="apiResponseLog" class="bg-black/30 rounded-lg p-4 h-48 overflow-y-auto font-mono text-xs">
+                        <div class="text-gray-400">API responses will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions Panel -->
+        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 mb-8">
+            <h3 class="text-xl font-semibold text-white mb-4">Quick Actions</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <button class="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white p-4 rounded-lg transition duration-300 flex flex-col items-center space-y-2" onclick="showBackupModal()">
+                    <i class="fas fa-download text-2xl"></i>
+                    <span class="text-sm font-medium">Backup All</span>
+                </button>
+                <button class="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white p-4 rounded-lg transition duration-300 flex flex-col items-center space-y-2" onclick="showRestoreModal()">
+                    <i class="fas fa-upload text-2xl"></i>
+                    <span class="text-sm font-medium">Restore</span>
+                </button>
+                <button class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-4 rounded-lg transition duration-300 flex flex-col items-center space-y-2" onclick="showMigrationModal()">
+                    <i class="fas fa-exchange-alt text-2xl"></i>
+                    <span class="text-sm font-medium">Migrate</span>
+                </button>
+                <button class="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white p-4 rounded-lg transition duration-300 flex flex-col items-center space-y-2" onclick="showMaintenanceModal()">
+                    <i class="fas fa-tools text-2xl"></i>
+                    <span class="text-sm font-medium">Maintenance</span>
+                </button>
+            </div>
+        </div>
+
         <!-- Sandboxes Table -->
         <div class="mt-8">
             <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
