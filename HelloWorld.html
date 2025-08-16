@@ -1,27 +1,200 @@
-<Title>
-    Jeff's AI Project
-</Title>
+<!DOCTYPE html>
+<html lang="en">
 
-<header>
-    Header: It's gonna be built with the help of AI tools for rapid iteration
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project Showcase</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        /* Custom scrollbar for Webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+    </style>
+</head>
 
-<body>
-    <h1>
-        The quick brown fox jumped over the lazy dog.
-    </h1>
-    <p>
-        The quick brown fox jumped over the lazy dog.
-    </p>
+<body class="bg-gray-900 text-gray-100">
 
-    <h2>
-        The quick brown fox jumped over the lazy dog.
-    </h2>
-    <p>
-        The quick brown fox jumped over the lazy dog.
-    </p>
+    <!-- Header Section -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
+                Jeff Lucero
+            </h1>
+            <nav class="mt-4 sm:mt-0">
+                <a href="#projects" class="text-gray-300 hover:text-white mx-3 transition duration-300 ease-in-out">Projects</a>
+                <a href="#" class="text-gray-300 hover:text-white mx-3 transition duration-300 ease-in-out">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto p-6 md:p-12">
+        <section id="introduction" class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+                My QA & Development Journey
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+                As an expert in Software Quality Assurance, I've had the opportunity to work on a diverse range of projects. This showcase highlights some of my key work in both QA and development, leveraging a variety of technologies and agile methodologies.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Project Card 1 -->
+            <div class="project-card bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out overflow-hidden transform hover:scale-105">
+                <img src="https://placehold.co/600x400/22c55e/ffffff?text=Project+1" alt="Project 1" class="w-full h-48 object-cover project-image transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-teal-300">HL7 FHIR API Tester</h3>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        Developed a comprehensive test suite for HL7 FHIR APIs to ensure regulatory compliance and data integrity. This project involved extensive API and database testing, and a focus on HIPAA-compliant data.
+                    </p>
+                    <ul class="flex flex-wrap gap-2 mb-4">
+                        <li class="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">Python</li>
+                        <li class="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">Postman</li>
+                        <li class="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">SQL</li>
+                        <li class="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">HIPAA</li>
+                    </ul>
+                    <button class="details-button bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors duration-300 w-full" data-project="hl7-fhir">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out overflow-hidden transform hover:scale-105">
+                <img src="https://placehold.co/600x400/ef4444/ffffff?text=Project+2" alt="Project 2" class="w-full h-48 object-cover project-image transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-red-300">Mobile Test Automation</h3>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        Built a robust automated test framework for a native mobile application using Appium. This significantly reduced manual testing time and improved regression coverage for new feature releases.
+                    </p>
+                    <ul class="flex flex-wrap gap-2 mb-4">
+                        <li class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">Appium</li>
+                        <li class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">Cypress</li>
+                        <li class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">JavaScript</li>
+                        <li class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">Agile SDLC</li>
+                    </ul>
+                    <button class="details-button bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors duration-300 w-full" data-project="mobile-automation">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out overflow-hidden transform hover:scale-105">
+                <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Project+3" alt="Project 3" class="w-full h-48 object-cover project-image transition-transform duration-500">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold mb-2 text-purple-300">ETL Integration Testing</h3>
+                    <p class="text-gray-400 mb-4 text-sm">
+                        Designed and executed test plans for complex ETL processes, ensuring data accuracy and transformation logic correctness. This project involved extensive data validation and collaboration with data engineering teams.
+                    </p>
+                    <ul class="flex flex-wrap gap-2 mb-4">
+                        <li class="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">SQL</li>
+                        <li class="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">Python</li>
+                        <li class="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">MongoDB</li>
+                        <li class="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">ETL</li>
+                    </ul>
+                    <button class="details-button bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition-colors duration-300 w-full" data-project="etl-testing">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 py-6 mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 Jeff Lucero. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Details Modal -->
+    <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 hidden">
+        <div class="bg-gray-800 rounded-lg p-8 max-w-lg w-full shadow-2xl relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-300 transition-colors duration-200 text-xl font-bold">&times;</button>
+            <h3 id="modal-title" class="text-3xl font-bold mb-4 text-white"></h3>
+            <p id="modal-body" class="text-gray-300 mb-6"></p>
+            <p id="modal-tech" class="text-gray-400 text-sm italic"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('modal');
+            const closeButton = document.getElementById('close-modal');
+            const detailsButtons = document.querySelectorAll('.details-button');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            const modalTech = document.getElementById('modal-tech');
+
+            const projects = {
+                'hl7-fhir': {
+                    title: 'HL7 FHIR API Tester',
+                    description: 'This project involved developing a comprehensive test framework for complex healthcare APIs. We focused on ensuring seamless data exchange between different systems while strictly adhering to HIPAA regulations. Key activities included automated end-to-end testing, performance load testing, and security checks on protected health information (PHI).',
+                    tech: 'Technologies: Python, Postman, SQL, JIRA, Splunk, HL7spy'
+                },
+                'mobile-automation': {
+                    title: 'Mobile Test Automation',
+                    description: 'In this project, I led the creation of an automated test suite for our mobile application. The framework was built using Appium and Cypress, enabling us to run regression tests on both iOS and Android platforms efficiently. This project significantly reduced our release cycle time and improved overall software quality.',
+                    tech: 'Technologies: Appium, Cypress.io, JavaScript, Agile SDLC, Visual Studio Code'
+                },
+                'etl-testing': {
+                    title: 'ETL Integration Testing',
+                    description: 'This initiative focused on the quality assurance of our data pipeline. My role involved creating and executing detailed test plans to validate data extraction, transformation, and loading (ETL) processes. I ensured data accuracy and integrity by writing complex SQL and MongoDB queries to compare source and destination data.',
+                    tech: 'Technologies: SQL, MongoDB, Python, ETL, Snowflake, Git'
+                }
+            };
+
+            detailsButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const projectId = button.dataset.project;
+                    const project = projects[projectId];
+                    if (project) {
+                        modalTitle.textContent = project.title;
+                        modalBody.textContent = project.description;
+                        modalTech.textContent = project.tech;
+                        modal.classList.remove('hidden');
+                    }
+                });
+            });
+
+            closeButton.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
 </body>
 
-<footer>
-    Footer: The quick brown fox jumped over the lazy dog.
-</footer>
+</html>
