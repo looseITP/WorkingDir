@@ -60,12 +60,12 @@
                 Pytest (Python based test management and reporting framework)
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button class="bg-gradient-to-r from-[#002244] to-[#FB4F14] text-white px-8 py-4 rounded-full hover:from-[#00132A] hover:to-[#FF8200] transition duration-300 ease-in-out font-semibold text-lg">
-                    Make this a link to an easter egg game
-                </button>
-                <button class="border border-[#FB4F14]/40 text-white px-8 py-4 rounded-full hover:bg-[#FB4F14]/10 transition duration-300 ease-in-out font-semibold text-lg">
-                    <i class="fas fa-users mr-2"></i>Make this a link to a different easter egg game
-                </button>
+                <a href="/easter-egg-game1.html" class="bg-gradient-to-r from-[#002244] to-[#FB4F14] text-white px-8 py-4 rounded-full hover:from-[#00132A] hover:to-[#FF8200] transition duration-300 ease-in-out font-semibold text-lg flex items-center gap-2">
+                    <i class="fas fa-gamepad"></i> Play Easter Egg Game 1
+                </a>
+                <a href="/easter-egg-game2.html" class="border border-[#FB4F14]/40 text-white px-8 py-4 rounded-full hover:bg-[#FB4F14]/10 transition duration-300 ease-in-out font-semibold text-lg flex items-center gap-2">
+                    <i class="fas fa-puzzle-piece"></i> Play Easter Egg Game 2
+                </a>
             </div>
         </div>
     </section>
@@ -73,45 +73,48 @@
     <!-- Features Section -->
     <section id="features" class="container mx-auto px-6 py-20">
         <div class="text-center mb-16">
-            <h3 class="text-4xl font-bold text-white mb-4">Why choose me for your AI Product Builder role?</h3>
+            <h3 class="text-4xl font-bold text-white mb-4">Project Reflections</h3>
             <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                I built this site in a few hours over a weekend using Cursor AI!
-
-                But it showcases my ability to connect an automated QA framework to cover the functionality of the same application!
-
-                Using Selenium and Cypress, you can quickly build a very robust and comprehensive test suite for your platform.
+                Insights from building and testing with Cursor AI
             </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Pros -->
             <div class="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-[#FB4F14]/30 hover:bg-[#FB4F14]/10 transition duration-300">
-                <div class="w-12 h-12 bg-gradient-to-r from-[#002244] to-[#FB4F14] rounded-lg flex items-center justify-center mb-6">
-                    <i class="fas fa-code-branch text-white text-xl"></i>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-thumbs-up text-[#FB4F14] text-2xl mr-2"></i>
+                    <h4 class="text-xl font-semibold text-white">Pros</h4>
                 </div>
-                <h4 class="text-xl font-semibold text-white mb-4">Pros: Quick Debugging of the Application</h4>
-                <p class="text-gray-300">As I'm building the code and executing commands in the terminal, Cursor and I can knock down and debug everything from:
-                    terminal errors,
-                    github auth issues,
-                    npm install issues,
-                    CSS look and feel issues,
-                    npm dependencies issues,
-                    and more!
-
-                    As a AI product builder, I can focus on building and testing the functionality of the application, and Cursor can focus on the details of the code.
-                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-200">
+                    <li>Quick debugging of the application</li>
+                    <li>AI helps with terminal errors, GitHub auth, npm issues, CSS, and more</li>
+                    <li>Focus on building and testing functionality, AI handles code details</li>
+                    <li>Automated QA with Selenium & Cypress</li>
+                </ul>
             </div>
+            <!-- Cons -->
             <div class="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-[#FB4F14]/30 hover:bg-[#FB4F14]/10 transition duration-300">
-                <div class="w-12 h-12 bg-gradient-to-r from-[#005A8B] to-[#FB4F14] rounded-lg flex items-center justify-center mb-6">
-                    <i class="fas fa-user-friends text-white text-xl"></i>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-thumbs-down text-[#FB4F14] text-2xl mr-2"></i>
+                    <h4 class="text-xl font-semibold text-white">Cons</h4>
                 </div>
-                <h4 class="text-xl font-semibold text-white mb-4">Con: Cypress and Browser Rendering Issues</h4>
-                <p class="text-gray-300">Cursor can't interpret the front end test results, a human being still needs to do that, but the AI can write the tests very quickly, shifting my QA focus to what actually matters: why is the functionality test failing?</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-200">
+                    <li>AI can't interpret frontend test results—human review still needed</li>
+                    <li>Some browser rendering issues require manual investigation</li>
+                    <li>Occasional npm dependency or environment hiccups</li>
+                </ul>
             </div>
+            <!-- Observations -->
             <div class="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-[#FB4F14]/30 hover:bg-[#FB4F14]/10 transition duration-300">
-                <div class="w-12 h-12 bg-gradient-to-r from-[#FB4F14] to-[#002244] rounded-lg flex items-center justify-center mb-6">
-                    <i class="fas fa-lightbulb text-white text-xl"></i>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-lightbulb text-[#FB4F14] text-2xl mr-2"></i>
+                    <h4 class="text-xl font-semibold text-white">Observations</h4>
                 </div>
-                <h4 class="text-xl font-semibold text-white mb-4">Scenario Based Testing</h4>
-                <p class="text-gray-300">Try new ideas, refactor code, and experiment freely—no risk, just learning and innovation.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-200">
+                    <li>Pair coding with AI accelerates learning and productivity</li>
+                    <li>Scenario-based testing encourages experimentation</li>
+                    <li>Cursor AI is a powerful assistant for rapid prototyping</li>
+                </ul>
             </div>
         </div>
     </section>

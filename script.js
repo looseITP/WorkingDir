@@ -225,5 +225,86 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Konami Code Easter Egg Logic ---
+    let konamiCode = [];
+    const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+
+    document.addEventListener('keydown', (e) => {
+        konamiCode.push(e.code);
+        if (konamiCode.length > konamiSequence.length) {
+            konamiCode.shift();
+        }
+        if (konamiCode.join(',') === konamiSequence.join(',')) {
+            showEasterEggGame1();
+            konamiCode = [];
+        }
+    });
+
+    // Easter Egg Game 1 Modal
+    window.showEasterEggGame1 = function() {
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50';
+        modal.innerHTML = `
+            <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 max-w-md w-full border border-white/10 text-center">
+                <h3 class="text-2xl font-bold text-white mb-4">🎮 Easter Egg Game 1</h3>
+                <p class="text-gray-300 mb-6">You discovered the secret Konami code!<br>Try to click the button as many times as you can in 5 seconds!</p>
+                <button id="egg1-start" class="bg-gradient-to-r from-[#002244] to-[#FB4F14] text-white px-6 py-3 rounded-lg font-semibold">Start Game</button>
+                <div id="egg1-game" class="mt-6"></div>
+                <button class="mt-8 bg-gradient-to-r from-[#002244] to-[#FB4F14] text-white px-4 py-2 rounded-lg font-semibold" onclick="this.closest('.fixed').remove()">Close</button>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        document.getElementById('egg1-start').onclick = function() {
+            let count = 0;
+            const gameDiv = document.getElementById('egg1-game');
+            gameDiv.innerHTML = '<button id="egg1-click" class="bg-[#FB4F14] text-white px-6 py-3 rounded-lg font-bold text-lg">Click me!</button><div class="mt-4 text-white">Score: <span id="egg1-score">0</span></div>';
+            const clickBtn = document.getElementById('egg1-click');
+            const scoreSpan = document.getElementById('egg1-score');
+            clickBtn.onclick = () => { count++; scoreSpan.textContent = count; };
+            setTimeout(() => {
+                clickBtn.disabled = true;
+                gameDiv.innerHTML += `<div class='mt-4 text-xl text-[#FB4F14] font-bold'>Time's up! Final Score: ${count}</div>`;
+            }, 5000);
+        };
+    };
+
+    // Easter Egg Game 2 Modal
+    window.showEasterEggGame2 = function() {
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50';
+        modal.innerHTML = `
+            <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 max-w-md w-full border border-white/10 text-center">
+                <h3 class="text-2xl font-bold text-white mb-4">🧩 Easter Egg Game 2</h3>
+                <p class="text-gray-300 mb-6">Memory Challenge!<br>Remember this sequence:</p>
+                <div id="egg2-sequence" class="text-2xl font-mono text-[#FB4F14] mb-4"></div>
+                <input id="egg2-input" class="bg-white/20 border border-[#FB4F14]/40 rounded-lg px-4 py-2 text-white placeholder-gray-400 mb-4" placeholder="Type the sequence..." />
+                <button id="egg2-check" class="bg-gradient-to-r from-[#002244] to-[#FB4F14] text-white px-4 py-2 rounded-lg font-semibold">Check</button>
+                <div id="egg2-result" class="mt-4"></div>
+                <button class="mt-8 bg-gradient-to-r from-[#002244] to-[#FB4F14] text-white px-4 py-2 rounded-lg font-semibold" onclick="this.closest('.fixed').remove()">Close</button>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        // Generate random sequence
+        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+        let seq = '';
+        for (let i = 0; i < 6; i++) seq += chars[Math.floor(Math.random() * chars.length)];
+        document.getElementById('egg2-sequence').textContent = seq;
+        document.getElementById('egg2-check').onclick = function() {
+            const val = document.getElementById('egg2-input').value.trim().toUpperCase();
+            const result = document.getElementById('egg2-result');
+            if (val === seq) {
+                result.innerHTML = '<span class="text-green-400 font-bold">Correct! 🎉</span>';
+            } else {
+                result.innerHTML = '<span class="text-red-400 font-bold">Try again!</span>';
+            }
+        };
+    };
+
+    // Attach hero button click handlers
+    const egg1Btn = document.querySelector('a[href="/easter-egg-game1.html"]');
+    if (egg1Btn) egg1Btn.onclick = (e) => { e.preventDefault(); showEasterEggGame1(); };
+    const egg2Btn = document.querySelector('a[href="/easter-egg-game2.html"]');
+    if (egg2Btn) egg2Btn.onclick = (e) => { e.preventDefault(); showEasterEggGame2(); };
+
     console.log('SandBox Pro - Premium Development Sandboxes loaded successfully!');
 });
