@@ -25,7 +25,6 @@ A modern, interactive fake sales platform designed for automated testing and dev
 - **System Status** monitoring
 
 ### 🎮 **Easter Eggs & Testing Features**
-- **Konami Code** (↑↑↓↓←→←→BA) for hidden features
 - **Keyboard Shortcuts** for quick actions
 - **Multiple User Roles** with different permissions
 - **Form Validations** and error states
