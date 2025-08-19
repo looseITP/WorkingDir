@@ -156,11 +156,6 @@ def test_login_functionality():
 - `Ctrl + Enter`: Submit login form
 - `Escape`: Clear login form
 
-### **Easter Eggs**
-- **Konami Code**: ↑↑↓↓←→←→BA (triggers hidden modal)
-- **Demo Credentials**: Double-click helper box
-- **Hidden Elements**: Various interactive features throughout
-
 ### **Role-based Features**
 - **Admin**: 15 sandboxes, 4.2GB storage, 12 team members
 - **User**: 8 sandboxes, 2.1GB storage, 6 team members
